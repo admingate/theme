@@ -1,0 +1,32 @@
+{
+    "name": "admingate/theme",
+    "description": "Theme package",
+    "type": "package",
+    "autoload": {
+        "psr-4": {
+            "Admingate\\Theme\\": "src"
+        }
+    },
+    "require": {
+        "admingate/admingate": "*@dev",
+        "admingate/sitemap": "*@dev",
+        "admingate/widget": "*@dev",
+        "admingate/slug": "*@dev",
+        "admingate/seo-helper": "*@dev"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Admingate\\Theme\\Providers\\ThemeServiceProvider",
+                "Admingate\\Theme\\Providers\\RouteServiceProvider"
+            ],
+            "aliases": {
+                "Theme": "Admingate\\Theme\\Facades\\ThemeFacade",
+                "ThemeOption": "Admingate\\Theme\\Facades\\ThemeOptionFacade",
+                "ThemeManager": "Admingate\\Theme\\Facades\\ManagerFacade",
+                "AdminBar": "Admingate\\Theme\\Facades\\AdminBarFacade",
+                "SiteMapManager": "Admingate\\Theme\\Facades\\SiteMapManagerFacade"
+            }
+        }
+    }
+}

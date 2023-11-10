@@ -1,0 +1,1 @@
+$(document).ready((function(){Admingate.initCodeEditor("custom_css")}));
